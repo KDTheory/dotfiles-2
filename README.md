@@ -1,4 +1,4 @@
-# jldeen does dotfiles - forked from holman's repo
+# KDTheory does dotfiles - forked from jldeen & holman's repo
 
 ### WSL Configuration / Install
 Run the following to configure WSL from scratch...
