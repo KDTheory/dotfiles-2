@@ -80,9 +80,10 @@ sudo apt-get install mc -y
 echo ''
 echo "Now installing Speedtest-cli, pip, tmux and jq..."
 echo ''
-sudo apt-get install jq tmux python-pip -y
+sudo apt-get install jq python-pip -y
 sudo pip install --upgrade pip
 sudo pip install speedtest-cli
+# sudo apt-get install tmux
 
 # Bash color scheme
 echo ''
