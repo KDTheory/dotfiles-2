@@ -1,5 +1,5 @@
 {
-// word wrap settings    
+// word wrap settings
     "editor.wordWrap": "on",
 //-------- Remote VSCode configuration --------
 
@@ -10,8 +10,8 @@
 "remote.onstartup": true,
 
 // Controls the font family.
-"editor.fontFamily": "'SauceCodePro Nerd Font'",
-"terminal.integrated.fontFamily": "'SauceCodePro Nerd Font'",
+"editor.fontFamily": "'SourceCodePro Nerd Font'",
+"terminal.integrated.fontFamily": "'SourceCodePro Nerd Font'",
 "terminal.integrated.fontSize": 11,
 "workbench.startupEditor": "newUntitledFile",
 "typescript.check.npmIsInstalled": false,
@@ -20,8 +20,8 @@
 // "workbench.colorTheme": "Visual Studio Dark"
 // "window.zoomLevel": 0,
 // "workbench.startupEditor": "newUntitledFile",
-//PowerShell
-// "terminal.integrated.shell.osx": "/usr/local/bin/powershell",
+//Zsh
+"terminal.integrated.shell.osx": "/usr/local/bin/zsh",
 // Color Override for terminal
 "workbench.colorCustomizations": {
     "terminal.foreground": "#839496",
