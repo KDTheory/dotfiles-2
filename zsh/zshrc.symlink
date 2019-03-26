@@ -14,8 +14,10 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # POWERLEVEL9K_IP_INTERFACE='en0'
 # POWERLEVEL9K_PUBLIC_IP_HOST='http://ident.me'
 
-# zsh tmux settings
+## zsh tmux settings
 ZSH_TMUX_AUTOSTART='true'
+# do not autoconnect to existing session, allows a new iTerm tab to open with a new tmux session
+ZSH_TMUX_AUTOCONNECT='false'
 
 ## Powerlevel9k Settings
 POWERLEVEL9K_HISTORY_BACKGROUND='green'
@@ -34,11 +36,39 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history kubecontext)
 POWERLEVEL9K_KUBECONTEXT_BACKGROUND='004'
 POWERLEVEL9K_KUBECONTEXT_FOREGROUND='000'
 
+# Refresh Function - https://babushk.in/posts/renew-environment-tmux.html
+# if [ -n "$TMUX" ]; then                                                                               
+if [ -n "$TMUX" ]; then                                                                               
+#   function refresh {                                                                                
+  function refresh {                                                                                
+#     export $(tmux show-environment | grep "^SSH_AUTH_SOCK")                                       
+    export $(tmux show-environment | grep "^SSH_AUTH_SOCK")                                       
+#     export $(tmux show-environment | grep "^DISPLAY")                                               
+    export $(tmux show-environment | grep "^DISPLAY")                                               
+#   }                                                                                                 
+  }                                                                                                 
+# else                                                                                                  
+else                                                                                                  
+#   function refresh { }                                                                              
+  function refresh { }                                                                              
+# fi
+fi
+
+
+# # Then, I define a preexec hook that calls refresh before each new command that gets executed:
+# Then, I define a preexec hook that calls refresh before each new command that gets executed:
+# function preexec {                                                                                    
+function preexec {                                                                                    
+#     refresh                                                                                           
+    refresh                                                                                           
+# }
+}
+
 # POWERLEVEL9K_TIME_FORMAT="%D{%T | %m.%d.%y}"
 ##
 
 # Default username to hide "user@hostname" info
-DEFAULT_USER="jessicadeen"
+DEFAULT_USER="KDTTheory"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
