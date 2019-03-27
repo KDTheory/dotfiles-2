@@ -181,14 +181,14 @@ else
 fi
 
 # symlink .dotfiles bin to ~
-ln -s $HOME/.dotfiles/bin $HOME/bin && success "symlink for $HOME/bin folder created"
+sudo ln -s $HOME/.dotfiles/bin $HOME/bin && success "symlink for $HOME/bin folder created"
 
 # symlink .dotfiles tmux to ~
-ln -s $HOME/.dotfiles/tmux $HOME/.tmux && success "symlink for $HOME/.tmux folder created"
+sudo ln -s $HOME/.dotfiles/tmux $HOME/.tmux && success "symlink for $HOME/.tmux folder created"
 
 # symlink VSCode User Settings
 if [ -d $HOME/Library/Application\ Support/Code/User ] ; then
-  ln -s $HOME/.dotfiles/code/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
+  sudo ln -s $HOME/.dotfiles/code/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
   success "symlink for vs code settings created"
 else
   info "symlink for vs code settings not created"
@@ -196,7 +196,7 @@ else
 fi
 
 # install Source Code Pro nerd font
-cp $HOME/.dotfiles/Source\ Code\ Pro\ Nerd\ Font\ Complete.ttf /Library/Fonts
+sudo cp $HOME/.dotfiles/Source\ Code\ Pro\ Nerd\ Font\ Complete.ttf /Library/Fonts
 success "Source Code Pro font copied successfully!"
 
 # .config permissions fix
@@ -221,7 +221,7 @@ add_line "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
   info "ERROR $PATH could not be added to crontab"
   fi
 
-add_cron "speedtest-cli --simple > ~/bin/bandwidth.log"
+add_cron "sudo speedtest-cli --simple > ~/bin/bandwidth.log"
   if [[ $? -eq 0 ]]
   then
   success "crontab created for speedtest cli --simple"
@@ -229,7 +229,7 @@ add_cron "speedtest-cli --simple > ~/bin/bandwidth.log"
   info "ERROR crontab could not be created for speedtest cli --simple"
   fi
 
-add_cron "speedtest-cli --json > ~/bin/bandwidth.json"
+add_cron "sudo speedtest-cli --json > ~/bin/bandwidth.json"
   if [[ $? -eq 0 ]]
   then
   success "crontab created for speedtest cli --json"
@@ -239,10 +239,10 @@ add_cron "speedtest-cli --json > ~/bin/bandwidth.json"
 
 # first run of speedtest-cli
 echo "Running speedtest-cli for tmux status bar data now..."
-speedtest-cli --simple > ~/bin/bandwidth.log
+sudo speedtest-cli --simple > ~/bin/bandwidth.log
 success "speedtest-cli bandwidth.log created"
 
-speedtest-cli --json > ~/bin/bandwidth.json
+sudo speedtest-cli --json > ~/bin/bandwidth.json
 success "speedtest-cli bandwidth.json created"
 
 # iterm2 config
