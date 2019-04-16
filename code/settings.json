@@ -53,5 +53,8 @@
     "workbench.activityBar.visible": true,
     "workbench.sideBar.location": "left",
     "workbench.iconTheme": "material-icon-theme",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "sync.autoUpload": true,
+    "sync.gist": "777e66fa419ea8fafc8326997bb2adccb7d9ff46",
+    "markdown.extension.preview.autoShowPreviewToSide": true
 }
