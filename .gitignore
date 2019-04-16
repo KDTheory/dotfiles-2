@@ -13,4 +13,6 @@ bin/ip.sh
 bin/kubectl
 bin/ssh.sh
 
+bin_old/
+
 git/gitconfig.local.symlink
