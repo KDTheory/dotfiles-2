@@ -146,3 +146,6 @@ alias k="kubectl"
 
 # az cli
 autoload bashcompinit && bashcompinit
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
