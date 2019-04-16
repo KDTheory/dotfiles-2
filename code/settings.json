@@ -1,49 +1,49 @@
 {
-// word wrap settings
+    // word wrap settings
     "editor.wordWrap": "on",
-//-------- Remote VSCode configuration --------
+    //-------- Remote VSCode configuration --------
 
-// Port number to use for connection.
-"remote.port": 52698,
+    // Port number to use for connection.
+    "remote.port": 52698,
 
-// Launch the server on start up.
-"remote.onstartup": true,
+    // Launch the server on start up.
+    "remote.onstartup": true,
 
-// Controls the font family.
-"editor.fontFamily": "'SourceCodePro Nerd Font'",
-"terminal.integrated.fontFamily": "'SourceCodePro Nerd Font'",
-"terminal.integrated.fontSize": 11,
-"workbench.startupEditor": "newUntitledFile",
-"typescript.check.npmIsInstalled": false,
-"window.zoomLevel": 1,
-"git.autofetch": true,
-// "workbench.colorTheme": "Visual Studio Dark"
-// "window.zoomLevel": 0,
-// "workbench.startupEditor": "newUntitledFile",
-//Zsh
-"terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-// Color Override for terminal
-"workbench.colorCustomizations": {
-    "terminal.foreground": "#839496",
-    "terminal.background": "#002833",
-    "terminal.ansiBlack": "#003541",
-    "terminal.ansiBlue": "#268bd2",
-    "terminal.ansiCyan": "#2aa198",
-    "terminal.ansiGreen": "#859901",
-    "terminal.ansiMagenta": "#d33682",
-    "terminal.ansiRed": "#dc322f",
-    "terminal.ansiWhite": "#eee8d5",
-    "terminal.ansiYellow": "#b58901",
-    "terminal.ansiBrightBlack": "#586e75",
-    "terminal.ansiBrightBlue": "#839496",
-    "terminal.ansiBrightCyan": "#93a1a1",
-    "terminal.ansiBrightGreen": "#586e75",
-    "terminal.ansiBrightMagenta": "#6c6ec6",
-    "terminal.ansiBrightRed": "#cb4b16",
-    "terminal.ansiBrightWhite": "#fdf6e3",
-    "terminal.ansiBrightYellow": "#657b83",
-    "terminalCursor.foreground": "#839496",
-    "terminalCursor.background": "#003541"
+    // Controls the font family.
+    "editor.fontFamily": "'SourceCodePro Nerd Font'",
+    "terminal.integrated.fontFamily": "'SourceCodePro Nerd Font'",
+    "terminal.integrated.fontSize": 11,
+    "workbench.startupEditor": "newUntitledFile",
+    "typescript.check.npmIsInstalled": false,
+    "window.zoomLevel": 1,
+    "git.autofetch": true,
+    // "workbench.colorTheme": "Visual Studio Dark"
+    // "window.zoomLevel": 0,
+    // "workbench.startupEditor": "newUntitledFile",
+    //Zsh
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+    // Color Override for terminal
+    "workbench.colorCustomizations": {
+        "terminal.foreground": "#839496",
+        "terminal.background": "#002833",
+        "terminal.ansiBlack": "#003541",
+        "terminal.ansiBlue": "#268bd2",
+        "terminal.ansiCyan": "#2aa198",
+        "terminal.ansiGreen": "#859901",
+        "terminal.ansiMagenta": "#d33682",
+        "terminal.ansiRed": "#dc322f",
+        "terminal.ansiWhite": "#eee8d5",
+        "terminal.ansiYellow": "#b58901",
+        "terminal.ansiBrightBlack": "#586e75",
+        "terminal.ansiBrightBlue": "#839496",
+        "terminal.ansiBrightCyan": "#93a1a1",
+        "terminal.ansiBrightGreen": "#586e75",
+        "terminal.ansiBrightMagenta": "#6c6ec6",
+        "terminal.ansiBrightRed": "#cb4b16",
+        "terminal.ansiBrightWhite": "#fdf6e3",
+        "terminal.ansiBrightYellow": "#657b83",
+        "terminalCursor.foreground": "#839496",
+        "terminalCursor.background": "#003541"
     },
     "workbench.colorTheme": "Material Theme",
     "azure.resourceFilter": [
@@ -55,6 +55,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "editor.formatOnSave": true,
     "sync.autoUpload": true,
-    "sync.gist": "777e66fa419ea8fafc8326997bb2adccb7d9ff46",
+    "sync.gist": "3c9cb17d1051aa9aa7f1bf0941ea3768",
     "markdown.extension.preview.autoShowPreviewToSide": true
 }
