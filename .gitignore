@@ -16,3 +16,5 @@ bin/ssh.sh
 bin_old/
 
 git/gitconfig.local.symlink
+
+code/settings\.json

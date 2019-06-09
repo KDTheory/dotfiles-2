@@ -181,14 +181,14 @@ else
 fi
 
 # symlink .dotfiles bin to ~
-sudo ln -s $HOME/.dotfiles/bin $HOME/bin && success "symlink for $HOME/bin folder created"
+ln -s $HOME/.dotfiles/bin $HOME/bin && success "symlink for $HOME/bin folder created"
 
 # symlink .dotfiles tmux to ~
-sudo ln -s $HOME/.dotfiles/tmux $HOME/.tmux && success "symlink for $HOME/.tmux folder created"
+ln -s $HOME/.dotfiles/tmux $HOME/.tmux && success "symlink for $HOME/.tmux folder created"
 
 # symlink VSCode User Settings
-if [ -d $HOME/Library/Application\ Support/Code/User ] ; then
-  sudo ln -s $HOME/.dotfiles/code/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
+if [ -d $HOME/Library/Application\ Support/Code/User ] ; then 
+  ln -s $HOME/.dotfiles/code/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
   success "symlink for vs code settings created"
 else
   info "symlink for vs code settings not created"
@@ -196,54 +196,53 @@ else
 fi
 
 # install Source Code Pro nerd font
-sudo cp $HOME/.dotfiles/Source\ Code\ Pro\ Nerd\ Font\ Complete.ttf /Library/Fonts
+cp $HOME/.dotfiles/Source\ Code\ Pro\ Nerd\ Font\ Complete.ttf /Library/Fonts
 success "Source Code Pro font copied successfully!"
 
 # .config permissions fix
-sudo chown $(whoami) $HOME/.config
+sudo chown $(whoami) $HOME/.config 
 success '.config permissions fixed'
-
 # airport symlink
 if ! [ -f /usr/local/bin/airport ]
   then
     sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
     success "symlink for airport created"
-  else
+  else 
     info "symlink for airport already exists"
   fi
 
 # crontab additions
-add_line "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-  if [[ $? -eq 0 ]]
-  then
-  success "$PATH added to crontab"
-  else
-  info "ERROR $PATH could not be added to crontab"
-  fi
+# add_line "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+#   if [[ $? -eq 0 ]]
+#   then
+#   success "$PATH added to crontab"
+#   else
+#   info "ERROR $PATH could not be added to crontab"
+#   fi
 
-add_cron "sudo speedtest-cli --simple > ~/bin/bandwidth.log"
-  if [[ $? -eq 0 ]]
-  then
-  success "crontab created for speedtest cli --simple"
-  else
-  info "ERROR crontab could not be created for speedtest cli --simple"
-  fi
+# add_cron "speedtest-cli --simple > ~/bin/bandwidth.log"
+#   if [[ $? -eq 0 ]]
+#   then
+#   success "crontab created for speedtest cli --simple"
+#   else
+#   info "ERROR crontab could not be created for speedtest cli --simple"
+#   fi
 
-add_cron "sudo speedtest-cli --json > ~/bin/bandwidth.json"
-  if [[ $? -eq 0 ]]
-  then
-  success "crontab created for speedtest cli --json"
-  else
-  info "ERROR crontab could not be created for speedtest cli --json"
-  fi
+# add_cron "speedtest-cli --json > ~/bin/bandwidth.json"
+#   if [[ $? -eq 0 ]]
+#   then
+#   success "crontab created for speedtest cli --json"
+#   else
+#   info "ERROR crontab could not be created for speedtest cli --json"
+#   fi
 
-# first run of speedtest-cli
-echo "Running speedtest-cli for tmux status bar data now..."
-sudo speedtest-cli --simple > ~/bin/bandwidth.log
-success "speedtest-cli bandwidth.log created"
+# # first run of speedtest-cli
+# echo "Running speedtest-cli for tmux status bar data now..."
+# speedtest-cli --simple > ~/bin/bandwidth.log
+# success "speedtest-cli bandwidth.log created"
 
-sudo speedtest-cli --json > ~/bin/bandwidth.json
-success "speedtest-cli bandwidth.json created"
+# speedtest-cli --json > ~/bin/bandwidth.json
+# success "speedtest-cli bandwidth.json created"
 
 # iterm2 config
 echo ''
@@ -251,7 +250,7 @@ read -p "Do you currently use iTerm2 and would you like to set KDTheory's custom
 echo ''
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  # Specify the preferences directory
+	# Specify the preferences directory
   defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.itermcfg/"
   # Tell iTerm2 to use the custom preferences in the directory
   defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
@@ -261,9 +260,9 @@ then
     else
         fail "failed to apply KDTheory's custom colors..." >&2
 fi
-else
+else 
     echo "You chose not to use iTerm2 or KDTheory's custom colors."
 fi
 
 echo ''
-echo '  Badass macOS terminal installed!'
+echo '	Badass macOS terminal installed!'
