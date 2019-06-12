@@ -21,7 +21,7 @@
     // "window.zoomLevel": 0,
     // "workbench.startupEditor": "newUntitledFile",
     //Zsh
-    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+    "terminal.integrated.shell.osx": "/bin/zsh",
     // Color Override for terminal
     "workbench.colorCustomizations": {
         "terminal.foreground": "#839496",
