@@ -1,17 +1,17 @@
 {
-    // word wrap settings    
-        "editor.wordWrap": "on",
+    // word wrap settings
+    "editor.wordWrap": "on",
     //-------- Remote VSCode configuration --------
-    
+
     // Port number to use for connection.
     "remote.port": 52698,
-    
+
     // Launch the server on start up.
     "remote.onstartup": true,
-    
+
     // Controls the font family.
-    "editor.fontFamily": "'SourceCodePro Nerd Font Mono'",
-    "terminal.integrated.fontFamily": "'SourceCodePro Nerd Font Mono'",
+    "editor.fontFamily": "'SourceCodePro Nerd Font'",
+    "terminal.integrated.fontFamily": "'SourceCodePro Nerd Font'",
     "terminal.integrated.fontSize": 11,
     "workbench.startupEditor": "newUntitledFile",
     "typescript.check.npmIsInstalled": false,
@@ -20,8 +20,8 @@
     // "workbench.colorTheme": "Visual Studio Dark"
     // "window.zoomLevel": 0,
     // "workbench.startupEditor": "newUntitledFile",
-    //PowerShell
-    // "terminal.integrated.shell.osx": "/usr/local/bin/powershell",
+    //Zsh
+    "terminal.integrated.shell.osx": "/bin/zsh",
     // Color Override for terminal
     "workbench.colorCustomizations": {
         "terminal.foreground": "#839496",
@@ -44,12 +44,66 @@
         "terminal.ansiBrightYellow": "#657b83",
         "terminalCursor.foreground": "#839496",
         "terminalCursor.background": "#003541"
-        },
-        "workbench.colorTheme": "Visual Studio Dark",
-        "azure.resourceFilter": [
-            "72f988bf-86f1-41af-91ab-2d7cd011db47/dfb5d696-98d8-447c-a14d-56f131f3c4a5",
-            "72f988bf-86f1-41af-91ab-2d7cd011db47/998e0f50-cedb-4e50-a461-52ef20a0478b"
-        ],
-        "workbench.activityBar.visible": true,
-        "workbench.sideBar.location": "left"
-    }
+    },
+    "workbench.colorTheme": "Material Theme",
+    "azure.resourceFilter": [
+        "72f988bf-86f1-41af-91ab-2d7cd011db47/dfb5d696-98d8-447c-a14d-56f131f3c4a5",
+        "72f988bf-86f1-41af-91ab-2d7cd011db47/998e0f50-cedb-4e50-a461-52ef20a0478b"
+    ],
+    "workbench.activityBar.visible": true,
+    "workbench.sideBar.location": "left",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.formatOnSave": true,
+    "sync.autoUpload": true,
+    "sync.gist": "3c9cb17d1051aa9aa7f1bf0941ea3768",
+    "markdown.extension.preview.autoShowPreviewToSide": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "python -u",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "ahk": "autohotkey",
+        "autoit": "autoit3",
+        "dart": "dart",
+        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        "haskell": "runhaskell",
+        "nim": "nim compile --verbosity:0 --hints:off --run",
+        "lisp": "sbcl --script",
+        "kit": "kitc --run"
+    },
+    "terminal.explorerKind": "external",
+    "terminal.external.osxExec": "iTerm.app",
+    "python.dataScience.sendSelectionToInteractiveWindow": true
+}
