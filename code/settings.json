@@ -107,5 +107,10 @@
     "terminal.external.osxExec": "iTerm.app",
     "python.dataScience.sendSelectionToInteractiveWindow": true,
     "editor.largeFileOptimizations": false,
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "python.pythonPath": "/Users/kdtheory/anaconda3/bin/python",
+    "python.linting.pep8Enabled": true,
+    "python.linting.enabled": true,
+    "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.formatting.provider": "black"
 }
