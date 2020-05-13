@@ -3,7 +3,7 @@
 ### macOS Configuration
 Run the following to configure macOS from scratch...
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/KDTheory/dotfiles/mac/configure.sh)"
+bash <(curl -fsSL https://raw.githubusercontent.com/KDTheory/dotfiles/mac/configure.sh)"
 ```
 
 ### Notes
